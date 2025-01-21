@@ -1,0 +1,12 @@
+*.o
+*.d
+*.crf
+*.log
+MDK-ARM/**/*.o
+MDK-ARM/**/*.d
+MDK-ARM/**/*.crf
+MDK-ARM/**/*.dep
+MDK-ARM/**/*.axf
+MDK-ARM/**/*.htm
+MDK-ARM/**/*.hex
+MDK-ARM/**/*.map
