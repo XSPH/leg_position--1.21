@@ -104,6 +104,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
   can_filter_init();
   dma_init();
+   // 定义并初始化leg_control_t结构体
+  leg_control_t motor_control;
+  motor_init(&motor_control);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -117,6 +121,7 @@ int main(void)
       sprintf(len, "%d", output);
       HAL_UART_Transmit(&huart6,(uint8_t *)len,strlen(len),1);
       HAL_UART_Transmit(&huart6,(uint8_t *)"\r\n",2,1);
+      motor_control_send(&motor_control);
       HAL_Delay(2);
   }
   /* USER CODE END 3 */
